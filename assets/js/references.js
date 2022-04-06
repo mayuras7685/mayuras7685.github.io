@@ -83,76 +83,76 @@ const moocscards = [
   {
     title: "Python",
     cardImage: "assets/images/education-page/python.png",
-    
+    moocLink: "https://www.youtube.com/playlist?list=PLu0W_9lII9agICnT8t4iYVSZ3eykIAOME"   
   },
 
   {
     title: "Javascript",
     cardImage: "assets/images/education-page/javascript.png",
-   
+    moocLink: "https://www.youtube.com/watch?v=le-URjBhevE&list=PLWKjhJtqVAbk2qRZtWSzCIN38JC_NdhW5"   
   },
 
   {
     title: "C++",
     cardImage: "assets/images/education-page/c.png",
-
+    moocLink: "https://www.youtube.com/playlist?list=PLLYz8uHU480j37APNXBdPz7YzAi4XlQUF"   
    
   },
 
   {
     title: "React",
     cardImage: "assets/images/education-page/react.png",
- 
+    moocLink: "https://www.youtube.com/watch?v=-mJFZp84TIY&list=PLu0W_9lII9agx66oZnT6IyhcMIbUMNMdt"   
   },
   
   {
     
     title: "HTML5",
     cardImage: "assets/images/education-page/html5.png",
-   
+    moocLink: "https://www.youtube.com/watch?v=BsDoLVMnmZs"   
   },
 
   {
     title: "CSS3",
     cardImage: "assets/images/education-page/css3.png",
-   
+    moocLink: "https://www.youtube.com/watch?v=Edsxf_NBFrw&t=2s"   
   },
 
   {
     title: "Mongo db",
     cardImage: "assets/images/education-page/mongodb.png",
-    
+    moocLink: "https://www.youtube.com/watch?v=oSIv-E60NiU"   
   },
 
   {
     
     title: "Git",
     cardImage: "assets/images/education-page/git.png",
-   
+    moocLink: "https://www.youtube.com/watch?v=gwWKnnCMQ5c&t=87s"   
   },
 
   {
     title: "NodeJS",
     cardImage: "assets/images/education-page/node-js.png",
-   
+    moocLink: "https://www.youtube.com/watch?v=BLl32FvcdVM"   
   },
 
   {
     title: "Django",
     cardImage: "assets/images/education-page/django.png",
-    
+    moocLink: "https://www.youtube.com/watch?v=JxzZxdht-XY&t=74s"   
   },
 
   {
     title: "Tensorflow",
     cardImage: "assets/images/education-page/tans.png",
-   
+    moocLink: "https://www.youtube.com/watch?v=Mubj_fqiAv8&list=PLeo1K3hjS3uu7CxAacxVndI4bE_o3BDtO"   
   },
 
   {
     title: "Pytorch",
     cardImage: "assets/images/education-page/pyt.svg",
-    
+    moocLink: "https://www.youtube.com/watch?v=GIsg-ZUy0MY&t=14s"   
   },
  
 ];
@@ -202,7 +202,7 @@ function showExperience() {
 const showCards = () => {
   let output = "";
   moocscards.forEach(
-    ({ title, cardImage}) =>
+    ({ title, cardImage, moocLink }) =>
     (output += `        
         <div class="col-6 col-md-3 col-sm-4 column" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="600" >  
             <div class="card mb-3 mx-auto">
@@ -210,6 +210,7 @@ const showCards = () => {
                   <div class="content-overlay"></div>
                     <img src=${cardImage} class="card-img-top content-image">     
                   <div class="content-details fadeIn-bottom">
+                    <a href="${moocLink}" target="_blank"><i class="fa fa-info-circle fa-2x" aria-hidden="true" style="color: white;"></i></a>                                   
                   </div>
                 </div>
                 <div class="card-body">
